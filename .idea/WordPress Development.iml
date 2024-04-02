@@ -8,6 +8,7 @@
       <sourceFolder url="file://$MODULE_DIR$/wp-content/plugins/safe-svg/includes" isTestSource="false" packagePrefix="SafeSVG" />
       <sourceFolder url="file://$MODULE_DIR$/wp-content/plugins/wp-crontrol/src" isTestSource="false" packagePrefix="Crontrol" />
       <sourceFolder url="file://$MODULE_DIR$/wp-content/themes/jobfactory-theme/src" isTestSource="false" packagePrefix="JobFactoryTheme" />
+      <excludeFolder url="file://$MODULE_DIR$/wp-content/plugins/pp-wp-memory-usage/vendor/gettext" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
