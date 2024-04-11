@@ -9,6 +9,15 @@
       <sourceFolder url="file://$MODULE_DIR$/wp-content/plugins/wp-crontrol/src" isTestSource="false" packagePrefix="Crontrol" />
       <sourceFolder url="file://$MODULE_DIR$/wp-content/themes/jobfactory-theme/src" isTestSource="false" packagePrefix="JobFactoryTheme" />
       <excludeFolder url="file://$MODULE_DIR$/wp-content/plugins/pp-wp-memory-usage/vendor/gettext" />
+      <excludeFolder url="file://$MODULE_DIR$/wp-content/plugins/wp-ldap-login/vendor/gettext" />
+      <excludeFolder url="file://$MODULE_DIR$/wp-content/plugins/wp-plugin-boilerplate/vendor/gettext" />
+      <excludeFolder url="file://$MODULE_DIR$/wp-content/plugins/wp-taxonomy-author-rights/vendor/gettext" />
+      <excludeFolder url="file://$MODULE_DIR$/wp-content/plugins/wp-zfinder-gomi/vendor/gettext" />
+      <excludeFolder url="file://$MODULE_DIR$/wp-content/plugins/wp-zfinder-lkwi/vendor/gettext" />
+      <excludeFolder url="file://$MODULE_DIR$/wp-content/themes/gp-master-theme/vendor/gettext" />
+      <excludeFolder url="file://$MODULE_DIR$/wp-content/themes/jobfactory-theme/vendor/gettext" />
+      <excludeFolder url="file://$MODULE_DIR$/wp-content/themes/likat-intranet-theme/vendor/gettext" />
+      <excludeFolder url="file://$MODULE_DIR$/wp-content/themes/ppfeufer/vendor/gettext" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
