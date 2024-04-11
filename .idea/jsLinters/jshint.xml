@@ -6,7 +6,7 @@
     <option boss="false" />
     <option browser="true" />
     <option browserify="false" />
-    <option camelcase="false" />
+    <option camelcase="true" />
     <option couch="false" />
     <option curly="true" />
     <option debug="false" />
@@ -25,16 +25,16 @@
     <option forin="true" />
     <option freeze="true" />
     <option funcscope="false" />
-    <option futurehostile="true" />
+    <option futurehostile="false" />
     <option gcl="false" />
     <option globalstrict="false" />
-    <option immed="true" />
+    <option immed="false" />
     <option indent="4" />
     <option iterator="false" />
     <option jasmine="false" />
     <option jquery="true" />
     <option lastsemic="false" />
-    <option latedef="nofunc" />
+    <option latedef="true" />
     <option laxbreak="false" />
     <option laxcomma="false" />
     <option loopfunc="false" />
@@ -44,7 +44,7 @@
     <option mootools="false" />
     <option moz="false" />
     <option multistr="false" />
-    <option newcap="true" />
+    <option newcap="false" />
     <option noarg="true" />
     <option nocomma="true" />
     <option node="false" />
