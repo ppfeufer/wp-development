@@ -11,6 +11,7 @@
         <exclude name="Squiz.Functions.MultiLineFunctionDeclaration.BraceOnSameLine" />
         <exclude name="PSR2.Classes.ClassDeclaration.OpenBraceNewLine" />
     </rule>
+    <rule ref="Squiz.Strings.DoubleQuoteUsage.NotRequired" />
     <rule ref="Generic.Functions.OpeningFunctionBraceKernighanRitchie" />
     <rule ref="Generic.Arrays.DisallowLongArraySyntax.Found">
         <type>error</type>
