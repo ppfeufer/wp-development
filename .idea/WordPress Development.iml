@@ -18,6 +18,8 @@
       <excludeFolder url="file://$MODULE_DIR$/wp-content/themes/jobfactory-theme/vendor/gettext" />
       <excludeFolder url="file://$MODULE_DIR$/wp-content/themes/likat-intranet-theme/vendor/gettext" />
       <excludeFolder url="file://$MODULE_DIR$/wp-content/themes/ppfeufer/vendor/gettext" />
+      <excludeFolder url="file://$MODULE_DIR$/wp-content/plugins/pp-wp-basic-security/vendor/gettext" />
+      <excludeFolder url="file://$MODULE_DIR$/wp-content/plugins/wp-zfinder/vendor/gettext" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
