@@ -3,6 +3,8 @@
 # Default goal and help message for the Makefile
 .DEFAULT_GOAL := help
 
+include .make/formatting.mk
+
 # Variables for the WordPress CLI and the path to the WordPress installation
 #wp_cli = /usr/local/bin/wp-cli
 wp_cli := $(shell which wp-cli)
@@ -18,10 +20,11 @@ clear-transient:
 
 # Help message for the Makefile
 help:
-	@echo "WordPress Development Makefile"
+	@echo "$(FONT_BOLD)WordPress Development$(FONT_BOLD_END) make commands"
 	@echo ""
-	@echo "Usage: make [command]"
+	@echo "$(FONT_UNDERLINE)Usage:$(FONT_UNDERLINE_END)"
+	@echo "  make [command]"
 	@echo ""
-	@echo "Commands:"
+	@echo "$(FONT_UNDERLINE)Commands:$(FONT_UNDERLINE_END)"
 	@echo "  clear-transient  Clear all transients from the WordPress database"
 	@echo ""
