@@ -4,7 +4,8 @@
 .DEFAULT_GOAL := help
 
 # Variables for the WordPress CLI and the path to the WordPress installation
-wp_cli = /usr/local/bin/wp-cli
+#wp_cli = /usr/local/bin/wp-cli
+wp_cli := $(shell which wp-cli)
 wp_path = ./../WP-Sources
 
 # Clear all transient caches from the WordPress database
