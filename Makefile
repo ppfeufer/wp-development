@@ -13,7 +13,6 @@ wp_path = ./../WP-Sources
 # Clear all transient caches from the WordPress database
 clear-transient:
 	@echo "Clearing all transient caches from the WordPress database …"
-
 	@$(wp_cli) transient delete \
 		--all \
 		--path=$(wp_path)
@@ -26,5 +25,5 @@ help:
 	@echo "  make [command]"
 	@echo ""
 	@echo "$(FONT_UNDERLINE)Commands:$(FONT_UNDERLINE_END)"
-	@echo "  clear-transient  Clear all transients from the WordPress database"
+	@echo "  clear-transient    Clear all transient caches from the WordPress database"
 	@echo ""
