@@ -9,9 +9,15 @@ ______________________________________________________________________
 - [WP Development](#wp-development)
   - [Requirements](#requirements)
     - [IDE](#ide)
+      - [PhpStorm](#phpstorm)
     - [Software](#software)
   - [Folder Structure](#folder-structure)
     - [Soft Links](#soft-links)
+  - [Apache Configuration](#apache-configuration)
+  - [WP-Cli](#wp-cli)
+  - [Makefile](#makefile)
+    - [Clear transient caches](#clear-transient-caches)
+    - [Run pre-commit checks](#run-pre-commit-checks)
 
 <!-- mdformat-toc end -->
 
@@ -21,9 +27,9 @@ ______________________________________________________________________
 
 ### IDE<a name="ide"></a>
 
-- PhpStorm
+#### PhpStorm<a name="phpstorm"></a>
 
-This setup is optimized for PhpStorm.
+This setup is optimized for JetBrains [PhpStorm](https://www.jetbrains.com/phpstorm/).
 If you use another IDE, you might have to adjust the setup a bit.
 
 ### Software<a name="software"></a>
@@ -75,4 +81,69 @@ the `WP-Development` folder.
 
 ```bash
 ln -s ~/Development/WordPress/Repositories/wp-content/ ~/Development/WordPress/WP-Development/wp-content
+```
+
+## Apache Configuration<a name="apache-configuration"></a>
+
+The Apache configuration for the WordPress instance should look like this:
+
+```apache
+<VirtualHost *:80>
+    ServerName wp-development.local
+    DocumentRoot "/home/username/Development/WordPress/WP-Sources"
+
+    SetEnv APPLICATION_ENV "development"
+
+    ErrorLog ${APACHE_LOG_DIR}/wp-development-error.log
+    CustomLog ${APACHE_LOG_DIR}/wp-development-access.log combined
+
+    <Directory "/home/username/Development/WordPress/WP-Sources">
+        Options FollowSymLinks
+        DirectoryIndex index.php
+        AllowOverride All
+        Require all granted
+    </Directory>
+</VirtualHost>
+```
+
+Remember to add the domain to your `/etc/hosts` file.
+
+```bash
+127.0.0.1    wp-development.local
+```
+
+Now restart Apache.
+
+```bash
+sudo systemctl restart apache2.service
+```
+
+## WP-Cli<a name="wp-cli"></a>
+
+To make the setup complete, we need to install WP-CLI.
+
+Run the following commands from the `Development/WordPress` folder.
+
+```bash
+curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar
+chmod +x wp-cli.phar
+sudo ln -s wp-cli.phar /usr/local/bin/wp-cli
+```
+
+## Makefile<a name="makefile"></a>
+
+The Makefile contains a couple of useful commands.
+
+All commands are run from the `WP-Development` folder.
+
+### Clear transient caches<a name="clear-transient-caches"></a>
+
+```bash
+make clear-transients
+```
+
+### Run pre-commit checks<a name="run-pre-commit-checks"></a>
+
+```bash
+make pre-commit-checks
 ```
