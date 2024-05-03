@@ -108,7 +108,7 @@ The Apache configuration for the WordPress instance should look like this:
 
 Remember to add the domain to your `/etc/hosts` file.
 
-```bash
+```text
 127.0.0.1    wp-development.local
 ```
 
