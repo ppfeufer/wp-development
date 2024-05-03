@@ -17,6 +17,7 @@ clear-transient:
 		--all \
 		--path=$(wp_path)
 
+# Run pre-commit checks
 pre-commit-checks:
 	@echo "Running pre-commit checks …"
 	pre-commit run --all-files
