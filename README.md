@@ -16,8 +16,9 @@ ______________________________________________________________________
   - [Apache Configuration](#apache-configuration)
   - [WP-Cli](#wp-cli)
   - [Makefile](#makefile)
-    - [Clear transient caches](#clear-transient-caches)
-    - [Run pre-commit checks](#run-pre-commit-checks)
+    - [Clear Transient Caches](#clear-transient-caches)
+    - [Run pre-commit Checks](#run-pre-commit-checks)
+    - [Update pre-commit Configuration](#update-pre-commit-configuration)
 
 <!-- mdformat-toc end -->
 
@@ -136,14 +137,20 @@ The Makefile contains a couple of useful commands.
 
 All commands are run from the `WP-Development` folder.
 
-### Clear transient caches<a name="clear-transient-caches"></a>
+### Clear Transient Caches<a name="clear-transient-caches"></a>
 
 ```bash
 make clear-transients
 ```
 
-### Run pre-commit checks<a name="run-pre-commit-checks"></a>
+### Run pre-commit Checks<a name="run-pre-commit-checks"></a>
 
 ```bash
 make pre-commit-checks
+```
+
+### Update pre-commit Configuration<a name="update-pre-commit-configuration"></a>
+
+```bash
+make update-pre-commit
 ```
