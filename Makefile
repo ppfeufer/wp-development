@@ -20,7 +20,12 @@ clear-transient:
 # Run pre-commit checks
 pre-commit-checks:
 	@echo "Running pre-commit checks …"
-	pre-commit run --all-files
+	@pre-commit run --all-files
+
+# Update pre-commit configuration
+pre-commit-update:
+	@echo "Updating pre-commit configuration …"
+	@pre-commit autoupdate
 
 # Help message for the Makefile
 help:
@@ -30,7 +35,8 @@ help:
 	@echo "  make [command]"
 	@echo ""
 	@echo "$(FONT_UNDERLINE)Commands:$(FONT_UNDERLINE_END)"
-	@echo "  clear-transient    Clear all transient caches from the WordPress database"
-	@echo "  help               Show this help message"
-	@echo "  pre-commit-checks  Run pre-commit checks"
+	@echo "  clear-transient      Clear all transient caches from the WordPress database"
+	@echo "  help                 Show this help message"
+	@echo "  pre-commit-checks    Run pre-commit checks"
+	@echo "  pre-commit-update    Update pre-commit configuration"
 	@echo ""
