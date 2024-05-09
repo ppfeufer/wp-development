@@ -112,11 +112,13 @@ repos:
         description: This hook checks that GitHub Actions files are valid.
         args:
           - --verbose
+
       - id: check-github-workflows
         name: Check GitHub Workflows
         description: This hook checks that GitHub Workflows files are valid.
         args:
           - --verbose
+
       - id: check-dependabot
         name: Check Dependabot Configuration
         description: This hook checks that Dependabot configuration files are valid.
