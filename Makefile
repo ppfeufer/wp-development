@@ -3,8 +3,8 @@
 # Default goal and help message for the Makefile
 .DEFAULT_GOAL := help
 
-# Define the font styles for the help message
-include .make/formatting.mk
+# Include the default configurations
+include .make/conf.d/*.mk
 
 # Variables for the WordPress CLI and the path to the WordPress installation
 wp_cli := $(shell which wp-cli)
