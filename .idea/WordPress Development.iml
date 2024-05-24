@@ -23,6 +23,7 @@
       <excludeFolder url="file://$MODULE_DIR$/wp-content/themes/relaunch4-theme/vendor/gettext" />
       <excludeFolder url="file://$MODULE_DIR$/wp-content/plugins/pp-wordpress-tweaks/vendor/gettext" />
       <excludeFolder url="file://$MODULE_DIR$/wp-content/plugins/searchwp-customizations/vendor/gettext" />
+      <excludeFolder url="file://$MODULE_DIR$/wp-content/plugins/mega-forms-local-captcha/vendor/gettext" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
