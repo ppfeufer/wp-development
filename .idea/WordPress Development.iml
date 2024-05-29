@@ -24,6 +24,9 @@
       <excludeFolder url="file://$MODULE_DIR$/wp-content/plugins/pp-wordpress-tweaks/vendor/gettext" />
       <excludeFolder url="file://$MODULE_DIR$/wp-content/plugins/searchwp-customizations/vendor/gettext" />
       <excludeFolder url="file://$MODULE_DIR$/wp-content/plugins/mega-forms-local-captcha/vendor/gettext" />
+      <excludeFolder url="file://$MODULE_DIR$/_pastebin_" />
+      <excludeFolder url="file://$MODULE_DIR$/.idea/dataSources" />
+      <excludeFolder url="file://$MODULE_DIR$/wp-content/plugins/jobfactory-talentfinder/.vscode" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
