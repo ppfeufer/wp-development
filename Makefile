@@ -4,6 +4,7 @@
 .DEFAULT_GOAL := help
 
 # Help message for the Makefile
+.PHONY: help
 help::
 	@echo "$(FONT_BOLD)WordPress Development$(FONT_BOLD_END) make commands"
 	@echo ""
