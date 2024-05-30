@@ -4,21 +4,22 @@ This is a setup for WordPress development using Git repositories for plugins and
 
 ______________________________________________________________________
 
-<!-- mdformat-toc start --slug=github --maxlevel=6 --minlevel=1 -->
+<!-- mdformat-toc start --slug=github --maxlevel=6 --minlevel=2 -->
 
-- [WP Development](#wp-development)
-  - [Requirements](#requirements)
-    - [IDE](#ide)
-      - [PhpStorm](#phpstorm)
-    - [Software](#software)
-  - [Folder Structure](#folder-structure)
-    - [Soft Links](#soft-links)
-  - [Apache Configuration](#apache-configuration)
-  - [WP-Cli](#wp-cli)
-  - [Makefile](#makefile)
-    - [Clear Transient Caches](#clear-transient-caches)
-    - [Run pre-commit Checks](#run-pre-commit-checks)
-    - [Update pre-commit Configuration](#update-pre-commit-configuration)
+- [Requirements](#requirements)
+  - [IDE](#ide)
+    - [PhpStorm](#phpstorm)
+  - [Software](#software)
+- [Folder Structure](#folder-structure)
+  - [Soft Links](#soft-links)
+- [Apache Configuration](#apache-configuration)
+- [WP-Cli](#wp-cli)
+- [Makefile](#makefile)
+  - [Clear Transient Caches](#clear-transient-caches)
+  - [Run pre-commit Checks](#run-pre-commit-checks)
+  - [Update pre-commit Configuration](#update-pre-commit-configuration)
+  - [Install WP-CLI](#install-wp-cli)
+  - [Update WP-CLI](#update-wp-cli)
 
 <!-- mdformat-toc end -->
 
@@ -43,7 +44,7 @@ If you use another IDE, you might have to adjust the setup a bit.
 
 This setup expects the following folder structure:
 
-```
+```text
 ~/Development/
 │-- WordPress/
 │   │-- Repositories/ # «-- This is where the plugin and theme Git repositories are located
@@ -67,7 +68,7 @@ Now we have to create a couple of soft links to make this work.
 First, we need to link the `plugins` and `themes` from the repositories to the
 WordPress sources.
 
-```bash
+```shell
 # First move the plugins and themes folders to the repositories
 mv ~/Development/WordPress/WP-Sources/wp-content/plugins/ ~/Development/WordPress/Repositories/wp-content/
 mv ~/Development/WordPress/WP-Sources/wp-content/themes/ ~/Development/WordPress/Repositories/wp-content/
@@ -80,7 +81,7 @@ ln -s ~/Development/WordPress/Repositories/wp-content/themes/ ~/Development/Word
 Then we need to link the `wp-content` folder from the repositories to
 the `WP-Development` folder.
 
-```bash
+```shell
 ln -s ~/Development/WordPress/Repositories/wp-content/ ~/Development/WordPress/WP-Development/wp-content
 ```
 
@@ -115,7 +116,7 @@ Remember to add the domain to your `/etc/hosts` file.
 
 Now restart Apache.
 
-```bash
+```shell
 sudo systemctl restart apache2.service
 ```
 
@@ -125,11 +126,14 @@ To make the setup complete, we need to install WP-CLI.
 
 Run the following commands from the `Development/WordPress` folder.
 
-```bash
+```shell
 curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar
 chmod +x wp-cli.phar
 sudo ln -s wp-cli.phar /usr/local/bin/wp-cli
 ```
+
+Or run `make wp-cli-install` from the `WP-Development` folder.
+(See [Makefile](#makefile))
 
 ## Makefile<a name="makefile"></a>
 
@@ -139,18 +143,30 @@ All commands are run from the `WP-Development` folder.
 
 ### Clear Transient Caches<a name="clear-transient-caches"></a>
 
-```bash
+```shell
 make clear-transients
 ```
 
 ### Run pre-commit Checks<a name="run-pre-commit-checks"></a>
 
-```bash
+```shell
 make pre-commit-checks
 ```
 
 ### Update pre-commit Configuration<a name="update-pre-commit-configuration"></a>
 
-```bash
+```shell
 make update-pre-commit
+```
+
+### Install WP-CLI<a name="install-wp-cli"></a>
+
+```shell
+make wp-cli-install
+```
+
+### Update WP-CLI<a name="update-wp-cli"></a>
+
+```shell
+make wp-cli-update
 ```

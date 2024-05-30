@@ -3,6 +3,9 @@
 # Default goal and help message for the Makefile
 .DEFAULT_GOAL := help
 
+# Global variables
+wp_dev_root_dir := $(shell dirname $(shell cd -P -- '$(shell dirname -- "$0")' && pwd -P)) # The root directory of the WordPress development environment (e.g., ~/Development/WordPress)
+
 # Help message for the Makefile
 .PHONY: help
 help::
