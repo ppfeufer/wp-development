@@ -26,7 +26,7 @@ wp-cli-update:
 # Help message for the WP-CLI commands
 .PHONY: help
 help::
-	@echo "  $(FONT_UNDERLINE)WP-CLI:$(FONT_UNDERLINE_END)"
+	@echo "  $(TEXT_UNDERLINE)WP-CLI:$(TEXT_UNDERLINE_END)"
 	@echo "    wp-cli-clear-transient    Clear all transient caches from the WordPress database"
 	@echo "    wp-cli-shell              Start the WP-CLI shell"
 	@echo "    wp-cli-update             Update WP-CLI"
