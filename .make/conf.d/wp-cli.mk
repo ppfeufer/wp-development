@@ -40,4 +40,3 @@ help::
 	@echo "    wp-cli-update             Update WP-CLI"
 	@echo "    wp-shell                  Start the WP-CLI shell"
 	@echo ""
-	@echo "$(shell dirname $(CWD))"
