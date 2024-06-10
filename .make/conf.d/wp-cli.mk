@@ -31,12 +31,20 @@ wp-cli-install:
 	@chmod +x $(wp_dev_root_dir)/wp-cli.phar
 	@sudo ln -sf $(wp_dev_root_dir)/wp-cli.phar /usr/local/bin/wp-cli
 
+# Uninstall WP-CLI
+.PHONY: wp-cli-uninstall
+wp-cli-uninstall:
+	@echo "Uninstalling WP-CLI …"
+	@sudo rm -f /usr/local/bin/wp-cli
+	@rm -f $(wp_dev_root_dir)/wp-cli.phar
+
 # Help message for the WP-CLI commands
 .PHONY: help
 help::
 	@echo "  $(TEXT_UNDERLINE)WP-CLI:$(TEXT_UNDERLINE_END)"
 	@echo "    clear-transient           Clear all transient caches from the WordPress database"
 	@echo "    wp-cli-install            Install WP-CLI"
+	@echo "    wp-cli-uninstall          Uninstall WP-CLI"
 	@echo "    wp-cli-update             Update WP-CLI"
 	@echo "    wp-shell                  Start the WP-CLI shell"
 	@echo ""
