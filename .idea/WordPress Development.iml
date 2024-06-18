@@ -27,6 +27,9 @@
       <excludeFolder url="file://$MODULE_DIR$/_pastebin_" />
       <excludeFolder url="file://$MODULE_DIR$/.idea/dataSources" />
       <excludeFolder url="file://$MODULE_DIR$/wp-content/plugins/jobfactory-talentfinder/.vscode" />
+      <excludeFolder url="file://$MODULE_DIR$/wp-content/plugins/wiro-news-rest-api-client/vendor/gettext" />
+      <excludeFolder url="file://$MODULE_DIR$/wp-content/plugins/wiro-news-rest-api-server/vendor/gettext" />
+      <excludeFolder url="file://$MODULE_DIR$/wp-content/themes/inrostock-messe-theme/vendor/gettext" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
