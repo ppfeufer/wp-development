@@ -18,22 +18,22 @@ wp-shell:
 		--path=$(wp_path)
 
 # Update WP-CLI
-.PHONY: wp-cli-update
-wp-cli-update:
+.PHONY: update-wp-cli
+update-wp-cli:
 	@echo "Updating WP-CLI …"
 	@$(wp_cli) cli update
 
 # Install WP-CLI
-.PHONY: wp-cli-install
-wp-cli-install:
+.PHONY: install-wp-cli
+install-wp-cli:
 	@echo "Installing WP-CLI …"
 	@curl -o $(wp_dev_root_dir)/wp-cli.phar https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar
 	@chmod +x $(wp_dev_root_dir)/wp-cli.phar
 	@sudo ln -sf $(wp_dev_root_dir)/wp-cli.phar /usr/local/bin/wp-cli
 
 # Uninstall WP-CLI
-.PHONY: wp-cli-uninstall
-wp-cli-uninstall:
+.PHONY: uninstall-wp-cli
+uninstall-wp-cli:
 	@echo "Uninstalling WP-CLI …"
 	@sudo rm -f /usr/local/bin/wp-cli
 	@rm -f $(wp_dev_root_dir)/wp-cli.phar
@@ -43,8 +43,8 @@ wp-cli-uninstall:
 help::
 	@echo "  $(TEXT_UNDERLINE)WP-CLI:$(TEXT_UNDERLINE_END)"
 	@echo "    clear-transient           Clear all transient caches from the WordPress database"
-	@echo "    wp-cli-install            Install WP-CLI"
-	@echo "    wp-cli-uninstall          Uninstall WP-CLI"
-	@echo "    wp-cli-update             Update WP-CLI"
+	@echo "    install-wp-cli            Install WP-CLI"
+	@echo "    uninstall-wp-cli          Uninstall WP-CLI"
+	@echo "    update-wp-cli             Update WP-CLI"
 	@echo "    wp-shell                  Start the WP-CLI shell"
 	@echo ""
