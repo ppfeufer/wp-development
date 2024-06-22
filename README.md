@@ -13,9 +13,11 @@ ______________________________________________________________________
 - [Folder Structure](#folder-structure)
   - [Soft Links](#soft-links)
 - [Apache Configuration](#apache-configuration)
-- [WP-Cli](#wp-cli)
+- [Composer](#composer)
+- [WP-CLI](#wp-cli)
 - [Makefile](#makefile)
   - [Clear Transient Caches](#clear-transient-caches)
+  - [Install pre-commit Hook](#install-pre-commit-hook)
   - [Run pre-commit Checks](#run-pre-commit-checks)
   - [Update pre-commit Configuration](#update-pre-commit-configuration)
   - [Install WP-CLI](#install-wp-cli)
@@ -36,7 +38,10 @@ If you use another IDE, you might have to adjust the setup a bit.
 
 ### Software<a name="software"></a>
 
+This setup requires the following software installed on your machine:
+
 - Apache2
+- Git
 - MariaDB 10.11 or newer
 - PHP 8.2 or newer
 
@@ -120,20 +125,34 @@ Now restart Apache.
 sudo systemctl restart apache2.service
 ```
 
-## WP-Cli<a name="wp-cli"></a>
+## Composer<a name="composer"></a>
 
-To make the setup complete, we need to install WP-CLI.
+Composer might be needed for some plugins or themes.
+Not all distributions come with Composer pre-installed,
+so you might have to install it yourself.
 
-Run the following commands from the `Development/WordPress` folder.
+To install Composer, run the following commands from the `Development/WordPress` folder.
 
 ```shell
-curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar
-chmod +x wp-cli.phar
-sudo ln -s wp-cli.phar /usr/local/bin/wp-cli
+make install-composer
 ```
 
-Or run `make wp-cli-install` from the `WP-Development` folder.
-(See [Makefile](#makefile))
+This will download the Composer phar file and make it executable and create a
+symlink to the `/usr/local/bin` folder as `composer`.
+
+## WP-CLI<a name="wp-cli"></a>
+
+WP-CLI is a command-line interface for WordPress. It allows you to do many tasks
+without using the WordPress admin interface.
+
+To install WP-CLI, run the following commands from the `Development/WordPress` folder.
+
+```shell
+make install-wp-cli
+```
+
+This will download the WP-CLI phar file and make it executable and create a
+symlink to the `/usr/local/bin` folder as `wp-cli`.
 
 ## Makefile<a name="makefile"></a>
 
@@ -143,11 +162,23 @@ All commands are run from the `WP-Development` folder.
 
 ### Clear Transient Caches<a name="clear-transient-caches"></a>
 
+This will clear WordPress transient caches, which can be useful when developing.
+
 ```shell
 make clear-transients
 ```
 
+### Install pre-commit Hook<a name="install-pre-commit-hook"></a>
+
+This will install the pre-commit hook for the project.
+
+```shell
+make pre-commit-install
+```
+
 ### Run pre-commit Checks<a name="run-pre-commit-checks"></a>
+
+This will run the pre-commit checks.
 
 ```shell
 make pre-commit-checks
@@ -155,18 +186,24 @@ make pre-commit-checks
 
 ### Update pre-commit Configuration<a name="update-pre-commit-configuration"></a>
 
+This will update the pre-commit configuration.
+
 ```shell
 make update-pre-commit
 ```
 
 ### Install WP-CLI<a name="install-wp-cli"></a>
 
+This will install WP-CLI and make it available as a global command under `/usr/local/bin/wp-cli`.
+
 ```shell
-make wp-cli-install
+make install-wp-cli
 ```
 
 ### Update WP-CLI<a name="update-wp-cli"></a>
 
+This will update WP-CLI to the latest version.
+
 ```shell
-make wp-cli-update
+make update-wp-cli
 ```
