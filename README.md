@@ -14,6 +14,7 @@ ______________________________________________________________________
   - [Soft Links](#soft-links)
 - [Apache Configuration](#apache-configuration)
 - [Composer](#composer)
+- [PHP Code Sniffer](#php-code-sniffer)
 - [WP-CLI](#wp-cli)
 - [Makefile](#makefile)
   - [Clear Transient Caches](#clear-transient-caches)
@@ -41,9 +42,12 @@ If you use another IDE, you might have to adjust the setup a bit.
 This setup requires the following software installed on your machine:
 
 - Apache2
+- Composer
 - Git
 - MariaDB 10.11 or newer
 - PHP 8.2 or newer
+- PHP Code Sniffer
+- WP-CLI
 
 ## Folder Structure<a name="folder-structure"></a>
 
@@ -139,6 +143,18 @@ make install-composer
 
 This will download the Composer phar file and make it executable and create a
 symlink to the `/usr/local/bin` folder as `composer`.
+
+## PHP Code Sniffer<a name="php-code-sniffer"></a>
+
+PHP Code Sniffer is a tool to help you write clean code. It checks your code against a set of coding standards.
+
+To install PHP Code Sniffer, run the following commands from the `Development/WordPress` folder.
+
+```shell
+make install-phpcs
+```
+
+This will install PHP Code Sniffer globally and make it available as a global command under `/usr/local/bin/phpcs`.
 
 ## WP-CLI<a name="wp-cli"></a>
 
