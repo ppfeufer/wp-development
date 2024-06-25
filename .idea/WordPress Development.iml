@@ -30,6 +30,7 @@
       <excludeFolder url="file://$MODULE_DIR$/wp-content/plugins/wiro-news-rest-api-client/vendor/gettext" />
       <excludeFolder url="file://$MODULE_DIR$/wp-content/plugins/wiro-news-rest-api-server/vendor/gettext" />
       <excludeFolder url="file://$MODULE_DIR$/wp-content/themes/inrostock-messe-theme/vendor/gettext" />
+      <excludeFolder url="file://$MODULE_DIR$/wp-content/plugins/wp-clickup-customer-portal/vendor/gettext" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
