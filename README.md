@@ -28,6 +28,17 @@ ______________________________________________________________________
 
 ______________________________________________________________________
 
+> \[!NOTE\]
+>
+> This setup is optimized for Linux.\
+> If you use a different operating system, you might have to make some adjustments.\
+> If you use Windows, you can use the Windows Subsystem for Linux (WSL) to run this setup.
+> You can find more information about WSL [here](https://docs.microsoft.com/en-us/windows/wsl/).
+>
+> It is suggested to fork this repository and adjust the setup to your needs.
+> This way, you can keep your setup in sync with your repository.
+> You can find more information about forking a repository [here](https://docs.github.com/en/get-started/quickstart/fork-a-repo).
+
 ## Requirements<a name="requirements"></a>
 
 ### IDE<a name="ide"></a>
