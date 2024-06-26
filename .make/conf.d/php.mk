@@ -1,4 +1,4 @@
-# Variables for the PHP tooling and the path to the WordPress installation
+# Variables for the PHP tooling
 composer := $(shell which composer)
 phpcs := $(shell which phpcs)
 phpcbf := $(shell which phpcbf)
