@@ -26,7 +26,8 @@ exclude: |
     LICENSE|
     .idea/|
     wp-content/|
-    _pastebin_/wp-test-data/
+    _pastebin_/wp-test-data/|
+    ISSUE_TEMPLATE/
   )
 
 # pre-commit setup
