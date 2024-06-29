@@ -19,8 +19,8 @@ README.md export-ignore
 
 # other files
 .editorconfig export-ignore
-.nvmrc export-ignore
 .make export-ignore
+.nvmrc export-ignore
 .pre-commit-config.yaml export-ignore
 .stylelintrc.json export-ignore
 eslint.config.js export-ignore
