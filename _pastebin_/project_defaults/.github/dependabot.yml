@@ -4,7 +4,7 @@ updates:
   # Maintain dependencies for GitHub Actions
   - package-ecosystem: "github-actions"
     directory: "/"
-    target-branch: "master"
+    target-branch: "master" # The branch to create pull requests against.
     schedule:
       interval: "monthly"
     commit-message:
@@ -14,7 +14,7 @@ updates:
   # Maintain dependencies for npm
   - package-ecosystem: "npm"
     directory: "/"
-    target-branch: "master"
+    target-branch: "master" # The branch to create pull requests against.
     versioning-strategy: increase
     groups:
       "NPM Dependencies":
@@ -31,7 +31,7 @@ updates:
   # Maintain dependencies for Composer
   - package-ecosystem: "composer"
     directory: "/"
-    target-branch: "master"
+    target-branch: "master" # The branch to create pull requests against.
     versioning-strategy: increase
     groups:
       "Composer Dependencies":
