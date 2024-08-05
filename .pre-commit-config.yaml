@@ -107,7 +107,7 @@ repos:
           - mdformat-shfmt==0.1.0  # Mdformat plugin to format shell code blocks » https://github.com/hukkin/mdformat-shfmt/tags
 
   - repo: https://github.com/python-jsonschema/check-jsonschema
-    rev: 0.28.6
+    rev: 0.29.1
     hooks:
       - id: check-github-actions
         name: Check GitHub Actions
