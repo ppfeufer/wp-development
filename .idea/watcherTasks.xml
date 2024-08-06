@@ -14,7 +14,7 @@
         <array />
       </option>
       <option name="outputFromStdout" value="false" />
-      <option name="program" value="/home/ppfeufer/Development/node_modules/sass/sass.js" />
+      <option name="program" value="$PROJECT_DIR$/../../../node_modules/sass/sass.js" />
       <option name="runOnExternalChanges" value="false" />
       <option name="scopeName" value="Project Files" />
       <option name="trackOnlyRoot" value="true" />
