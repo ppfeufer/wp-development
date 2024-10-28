@@ -5,6 +5,7 @@
 
 plugin_name = Plugin Name
 plugin_slug = plugin-slug
+plugin_file = PluginFile.php
 
 # Help message for the Makefile
 .PHONY: help
