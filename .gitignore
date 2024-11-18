@@ -3,3 +3,5 @@
 .idea/libraries/Generated_files.xml
 
 /wp-content*
+
+*.sql
