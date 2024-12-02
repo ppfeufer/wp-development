@@ -35,7 +35,7 @@ ______________________________________________________________________
 
 ______________________________________________________________________
 
-> \[!NOTE\]
+> [!NOTE]
 >
 > This setup is optimized for Linux, with the shell commands to install packages
 > targeted at Debian- or Ubuntu-based distributions.
@@ -247,7 +247,7 @@ symlink to the `/usr/local/bin` folder as `wp-cli`.
 This setup is optimized for JetBrains [PhpStorm](https://www.jetbrains.com/phpstorm/).
 If you use another IDE, you might have to adjust the setup a bit.
 
-> \[!NOTE\]
+> [!NOTE]
 >
 > The IDE settings are stored in the `.idea` folder in `~/Development/WordPress/WP-Development`.
 >
@@ -260,7 +260,7 @@ If you use another IDE, you might have to adjust the setup a bit.
 
 #### Settings to Double-Check<a name="settings-to-double-check"></a>
 
-> \[!NOTE\]
+> [!NOTE]
 >
 > Some settings need node modules to be installed.\
 > For this setup, the node modules are assumed to be installed in
