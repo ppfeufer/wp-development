@@ -7,6 +7,10 @@ plugin_name = Plugin Name
 plugin_slug = plugin-slug
 plugin_file = PluginFile.php
 
+# Git repository URLs
+plugin_repo_url = https://github.com/ppfeufer/${plugin_slug}
+plugin_issues_url = $(plugin_repo_url)/issues
+
 # Help message for the Makefile
 .PHONY: help
 help::

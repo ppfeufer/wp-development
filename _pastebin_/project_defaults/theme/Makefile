@@ -7,6 +7,10 @@
 theme_name = Theme Name
 theme_slug = theme-slug
 
+# Git repository URLs
+theme_repo_url = https://github.com/ppfeufer/${theme_slug}
+theme_issues_url = $(theme_repo_url)/issues
+
 # Help message for the Makefile
 .PHONY: help
 help::
