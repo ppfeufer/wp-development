@@ -1,11 +1,11 @@
 # Apply to all files without committing:
 #   pre-commit run --all-files
 # Update this file:
-#   pre-commit autoupdate
+#   pre-commit autoupdate --freeze
 
+# Set the default language versions for the hooks
 default_language_version:
-  # force all unspecified python hooks to run python3
-  python: python3
+  python: python3  # Force all Python hooks to use Python 3
 
 # https://pre-commit.ci/
 ci:
@@ -33,7 +33,7 @@ exclude: |
 # pre-commit setup
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v5.0.0
+    rev: cef0300fd0fc4d2a87a85fa2093c6b283ea36f4b  # frozen: v5.0.0
     hooks:
       # Identify invalid files
       - id: check-yaml
@@ -89,14 +89,14 @@ repos:
         description: This hook ensures that files end with a newline.
 
   - repo: https://github.com/editorconfig-checker/editorconfig-checker.python
-    rev: 3.0.3
+    rev: 1a92c0953500d402fc49ceb67ad7fbf7cabad38a  # frozen: 3.0.3
     hooks:
       - id: editorconfig-checker
         name: EditorConfig Checker
         description: This hook checks for compliance with definitions made in EditorConfig files.
 
   - repo: https://github.com/executablebooks/mdformat
-    rev: 0.7.19
+    rev: 00812cd1850e41aae5c0916645b4b7404f538e8c  # frozen: 0.7.19
     hooks:
       - id: mdformat
         name: Mdformat
@@ -107,7 +107,7 @@ repos:
           - mdformat-shfmt==0.2.0  # Mdformat plugin to format shell code blocks » https://github.com/hukkin/mdformat-shfmt/tags
 
   - repo: https://github.com/python-jsonschema/check-jsonschema
-    rev: 0.30.0
+    rev: cb3c2be894b151dff143b1baf6acbd55f2b7faed  # frozen: 0.30.0
     hooks:
       - id: check-github-actions
         name: Check GitHub Actions
