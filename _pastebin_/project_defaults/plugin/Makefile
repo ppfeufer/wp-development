@@ -1,4 +1,4 @@
-# Makefile for the WordPress plugin WordPress Memory Usage
+# Makefile for the WordPress Plugin
 
 # Default goal and help message for the Makefile
 .DEFAULT_GOAL := help

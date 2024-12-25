@@ -5,10 +5,10 @@
 
 # Theme information
 theme_name = Theme Name
-theme_slug = theme-slug
+theme_slug = theme-name
 
 # Git repository URLs
-theme_repo_url = https://github.com/ppfeufer/${theme_slug}
+theme_repo_url = https://github.com/ppfeufer/$(theme_slug)-wordpress-theme
 theme_issues_url = $(theme_repo_url)/issues
 
 # Help message for the Makefile
