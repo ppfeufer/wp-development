@@ -1,6 +1,6 @@
 {
-    "name": "ppfeufer/pp-wordpress-tweaks",
-    "description": "WordPress Tweaks - A collection of personal tweaks for WordPress.",
+    "name": "vendor/my-plugin",
+    "description": "My Plugin",
     "authors": [
         {
             "name": "Peter Pfeufer",
@@ -20,7 +20,7 @@
     "extra": {
         "strauss": {
             "target_directory": "Sources/Libs",
-            "namespace_prefix": "WordPress\\Ppfeufer\\Plugin\\WordPressTweaks\\Libs\\",
+            "namespace_prefix": "MyNamespace\\MyPlugin\\Libs\\",
             "include_modified_date": false,
             "include_author": false
         }
@@ -46,7 +46,7 @@
     },
     "autoload": {
         "psr-4": {
-            "WordPress\\Ppfeufer\\Plugin\\WordPressTweaks\\": "Sources"
+            "MyNamespace\\MyPlugin\\": "Sources"
         },
         "classmap": [
             "vendor"

@@ -1,6 +1,6 @@
 {
-    "name": "ppfeufer/ppfeufer",
-    "description": "Theme for my homepage",
+    "name": "prefix/my-theme",
+    "description": "My Theme",
     "authors": [
         {
             "name": "Peter Pfeufer",
@@ -19,7 +19,7 @@
     "extra": {
         "strauss": {
             "target_directory": "Sources/Libs",
-            "namespace_prefix": "WordPress\\Ppfeufer\\Theme\\Ppfeufer\\Libs\\",
+            "namespace_prefix": "MyNamespace\\MyTheme\\Libs\\",
             "include_modified_date": false,
             "include_author": false
         }
@@ -45,7 +45,7 @@
     },
     "autoload": {
         "psr-4": {
-            "WordPress\\Ppfeufer\\Theme\\Ppfeufer\\": "Sources"
+            "MyNamespace\\MyTheme\\": "Sources"
         },
         "classmap": [
             "vendor"
