@@ -19,8 +19,24 @@
 
 namespace MyNamespace\MyTheme;
 
-// Define a couple of constants we might need.
 // phpcs:disable
+
+/**
+ * Constants should be namespace-aware.
+ *
+ * Constants defined via `define()` are not namespaced by default
+ * and need to be namespaced manually.
+ *
+ * Constants defined via `const` are namespaced by default and
+ * don't need any special treatment.
+ *
+ * Example:
+ * Namespaced constant definition via `define()`:
+ * ```
+ * define(constant_name: __NAMESPACE__ . '\CONSTANT_NAME', value: 'value');
+ * ```
+ */
+
 // Theme name
 define(
     constant_name: __NAMESPACE__ . '\THEME_NAME',
@@ -33,31 +49,36 @@ define(
     value: wp_get_theme()->get('Version')
 );
 
-// Theme directory
+// Theme directory (without trailing slash)
 define(
     constant_name: __NAMESPACE__ . '\THEME_DIRECTORY',
     value: get_stylesheet_directory()
 );
 
-// Theme directory URI
+// Theme directory URI (without trailing slash)
 define(
     constant_name: __NAMESPACE__ . '\THEME_DIRECTORY_URI',
     value: get_stylesheet_directory_uri()
 );
 
 // Theme slug
-const THEME_SLUG = 'ppfeufer';
+const THEME_SLUG = 'my-theme';
 
-// Theme Sources directory
-const THEME_SOURCES_DIRECTORY = THEME_DIRECTORY . '/Sources/';
+// Theme Sources directory (without trailing slash)
+const THEME_SOURCES_DIRECTORY = THEME_DIRECTORY . '/Sources';
+
+// Theme Library directory (without trailing slash)
+const THEME_LIBRARY_DIRECTORY = THEME_SOURCES_DIRECTORY . '/Libs';
 
 // Theme GitHub URI
 const THEME_GITHUB_URI = 'https://github.com/ppfeufer/' . THEME_SLUG . '-wordpress-theme/';
 // phpcs:enable
 
-// Include the autoloader and the libraries autoloader
-require_once THEME_SOURCES_DIRECTORY . 'autoloader.php';
-require_once THEME_SOURCES_DIRECTORY . 'Libs/autoload.php';
+// Include the theme autoloader
+require_once THEME_SOURCES_DIRECTORY . '/autoload.php';
+
+// Include the library autoloader
+require_once THEME_LIBRARY_DIRECTORY . '/autoload.php';
 
 // Load the themes' main class.
 (new Main())->init();
