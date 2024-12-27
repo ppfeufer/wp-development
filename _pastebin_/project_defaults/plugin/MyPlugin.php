@@ -45,34 +45,43 @@ namespace MyNamespace\MyPlugin;
  * ```
  */
 
-// Plugin directory path (without trailing slash)
-define(
-    constant_name: __NAMESPACE__ . '\PLUGIN_DIR_PATH',
-    value: plugin_dir_path(file: __FILE__)
-);
-
-// Plugin directory path relative to wp-content/plugins (without trailing slash)
-define(
-    constant_name: __NAMESPACE__ . '\PLUGIN_REL_PATH',
-    value: dirname(plugin_basename(file: __FILE__))
-);
-
-// Plugin directory URL (with trailing slash)
-define(
-    constant_name: __NAMESPACE__ . '\PLUGIN_DIR_URL',
-    value: plugin_dir_url(file: __FILE__)
-);
-
-// Plugin basename
+/**
+ * Plugin basename
+ */
 define(
     constant_name: __NAMESPACE__ . '\PLUGIN_BASENAME',
     value: plugin_basename(file: __FILE__)
 );
 
-// Plugin source path (without trailing slash)
+/**
+ * Plugin directory path relative to wp-content/plugins (without trailing slash)
+ */
+define(
+    constant_name: __NAMESPACE__ . '\PLUGIN_REL_PATH',
+    value: dirname(PLUGIN_BASENAME)
+);
+
+/**
+ * Plugin directory URL (with trailing slash)
+ */
+define(
+    constant_name: __NAMESPACE__ . '\PLUGIN_DIR_URL',
+    value: plugin_dir_url(file: __FILE__)
+);
+
+/**
+ * Plugin directory path (without trailing slash)
+ */
+const PLUGIN_DIR_PATH = __DIR__;
+
+/**
+ * Plugin source path (without trailing slash)
+ */
 const PLUGIN_SOURCE_PATH = PLUGIN_DIR_PATH . '/Sources';
 
-// Plugin library path (without trailing slash)
+/**
+ * Plugin library path (without trailing slash)
+ */
 const PLUGIN_LIBRARY_PATH = PLUGIN_SOURCE_PATH . '/Libs';
 
 // Include the plugin autoloader
