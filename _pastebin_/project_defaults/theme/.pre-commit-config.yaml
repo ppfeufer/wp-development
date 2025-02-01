@@ -114,31 +114,30 @@ repos:
           - --report=full
 
   - repo: https://github.com/eslint/eslint
-    rev: de2b7986929c5a92de076e4381b8bb05440e78c2  # frozen: v9.16.0
+    rev: 66b0d0d0841c83f8c7b600246e94a7a76ed77ca6  # frozen: v9.19.0
     hooks:
       - id: eslint
         name: ESLint
-        description: This hook checks for problems in JavaScript code.
+        description: Check for problems in JavaScript files.
         language: node
 #        additional_dependencies:
 #          # eslint itself needs to be here when using additional_dependencies.
-#          - eslint@9.16.0  # https://github.com/eslint/eslint/releases/latest
-#          - globals@15.13.0  # https://github.com/sindresorhus/globals/releases/latest
+#          - eslint@9.19.0 # https://github.com/eslint/eslint/releases/latest
+#          - globals@15.14.0  # https://github.com/sindresorhus/globals/releases/latest
 
   - repo: https://github.com/thibaudcolas/pre-commit-stylelint
-    rev: 29cc51ef83ff0b4aaf74595268e022873015bd9b  # frozen: v16.11.0
+    rev: adbd5eb765476b51bf2d2621a7492053153a4d06  # frozen: v16.14.1
     hooks:
       - id: stylelint
         name: Stylelint
-        description: This hook checks for problems in CSS code.
+        description: Check for problems in CSS files.
         language: node
         args:
           - --formatter=compact
         additional_dependencies:
           # stylelint itself needs to be here when using additional_dependencies.
-          - stylelint@16.11.0  # https://github.com/stylelint/stylelint/releases/latest
-          - stylelint-config-standard@36.0.1  # https://github.com/stylelint/stylelint-config-standard/releases/latest
-#          - stylelint-config-standard-scss@13.0.0  # https://github.com/stylelint-scss/stylelint-config-standard-scss/releases/latest
+          - stylelint@16.14.1  # https://github.com/stylelint/stylelint/releases/latest
+          - stylelint-config-standard@37.0.0  # https://github.com/stylelint/stylelint-config-standard/releases/latest
 
   - repo: https://github.com/editorconfig-checker/editorconfig-checker.python
     rev: 1a92c0953500d402fc49ceb67ad7fbf7cabad38a  # frozen: 3.0.3
