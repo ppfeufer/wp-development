@@ -23,7 +23,7 @@
     </TaskOptions>
     <enabled-global>
       <option value="CSSO CSS Optimizer" />
-      <option value="UglifyJS" />
+      <option value="Terser JS Compressor" />
     </enabled-global>
   </component>
 </project>
