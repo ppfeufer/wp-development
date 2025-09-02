@@ -292,14 +292,14 @@ They are used to minify and optimize CSS and JavaScript files.
 To use them, you need to have the following node modules installed:
 
 - [csso-cli](https://www.npmjs.com/package/csso-cli)
-- [uglify-js](https://www.npmjs.com/package/uglify-js)
+- [terser](https://www.npmjs.com/package/terser)
 - [sass](https://www.npmjs.com/package/sass)
 
 For simplicities’ sake, it is assumed that node modules are installed in the `~/Development/node_modules/` folder.
 You can install them by running the following command from the `~/Development` folder.
 
 ```shell
-npm install csso-cli uglify-js sass
+npm install csso-cli terser sass
 ```
 
 To configure the file watchers, go to:
@@ -313,11 +313,11 @@ To configure the file watchers, go to:
     - **Output paths**: `$FileNameWithoutExtension$.min.css`
     - **Working directory**: `$FileDir$`
     - **Advanced options**: Nothing selected
-  - **UglifyJS**
-    - **Program**: `/home/your_user/Development/node_modules/uglify-js/bin/uglifyjs`
+  - **Terser**
+    - **Program**: `/home/your_user/Development/node_modules/terser/bin/terser`
     - **File type**: `JavaScript`
     - **Scope**: `Project Files`
-    - **Arguments**: `$FileName$ -o $FileNameWithoutExtension$.min.js --source-map "url='$FileNameWithoutExtension$.min.js.map'" --compress reduce_vars=false --mangle`
+    - **Arguments**: `$FileName$ -o $FileNameWithoutExtension$.min.js --source-map "url='$FileNameWithoutExtension$.min.js.map'" --compress reduce_vars=false --mangle --format quote_style=1`
     - **Output paths**: `$FileNameWithoutExtension$.min.js`
     - **Working directory**: `$FileDir$`
     - **Advanced options**: Nothing selected
