@@ -90,7 +90,7 @@ repos:
         description: This hook ensures that files end with a newline.
 
   - repo: https://github.com/editorconfig-checker/editorconfig-checker.python
-    rev: 62dcf364a52192458d66c0dba3a0a1fdb78e4fbe  # frozen: 3.4.1
+    rev: 11ea70506fd878d26129b2b87746fd1a1f6b561b  # frozen: 3.6.0
     hooks:
       - id: editorconfig-checker
         name: EditorConfig Checker
@@ -108,7 +108,7 @@ repos:
           - mdformat-shfmt==0.2.0  # Mdformat plugin to format shell code blocks » https://github.com/hukkin/mdformat-shfmt/tags
 
   - repo: https://github.com/python-jsonschema/check-jsonschema
-    rev: 83b816d020105076daac266dbf6bfed199a2da93  # frozen: 0.34.1
+    rev: 16a6ad2fead09286ee6eb6b0a3fab55655a6c22a  # frozen: 0.35.0
     hooks:
       - id: check-github-actions
         name: Check GitHub Actions
