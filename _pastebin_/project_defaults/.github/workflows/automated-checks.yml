@@ -1,8 +1,7 @@
 name: Automated Checks
 
 env:
-  NODE_VERSION: 22 # [LTS] End of Life: 30 Apr 2027 (https://endoflife.date/nodejs)
-  PYTHON_VERSION: 3.12 # End of Life: 31 Oct 2028 (https://endoflife.date/python)
+  NODE_VERSION: 24 # [LTS] End of Life: 30 Apr 2028 (https://endoflife.date/nodejs)
 
 on:
   push:
@@ -33,12 +32,6 @@ jobs:
         uses: php-actions/composer@v6
 #        with:
 #          composer-options: install --no-dev --no-interaction --no-progress --no-suggest --optimize-autoloader --classmap-authoritative
-
-      - name: Set up Python
-        uses: actions/setup-python@v6
-        with:
-          python-version: ${{ env.PYTHON_VERSION }}
-          check-latest: true
 
       - name: Setup Node.js
         uses: actions/setup-node@v6

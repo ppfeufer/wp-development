@@ -37,6 +37,8 @@
       <excludeFolder url="file://$MODULE_DIR$/wp-content/plugins/pp-wp-show-ids/vendor/gettext" />
       <excludeFolder url="file://$MODULE_DIR$/wp-content/plugins/download-button-shortcode/vendor/gettext" />
       <excludeFolder url="file://$MODULE_DIR$/wp-content/themes/eve-online/vendor/gettext" />
+      <excludeFolder url="file://$MODULE_DIR$/wp-content/cache" />
+      <excludeFolder url="file://$MODULE_DIR$/wp-content/uploads" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
