@@ -213,7 +213,7 @@ To install Composer, run the following command from the `~/Development/WordPress
 make install-composer
 ```
 
-This will download the Composer phar file and make it executable and create a
+This will download the Composer `phar` file and make it executable and create a
 symlink to the `/usr/local/bin` folder as `composer`.
 
 #### Install PHP Code Sniffer<a name="install-php-code-sniffer"></a>
@@ -239,7 +239,7 @@ To install WP-CLI, run the following command from the `~/Development/WordPress/W
 make install-wp-cli
 ```
 
-This will download the WP-CLI phar file and make it executable and create a
+This will download the WP-CLI `phar` file and make it executable and create a
 symlink to the `/usr/local/bin` folder as `wp-cli`.
 
 ### PhpStorm<a name="phpstorm"></a>
@@ -268,7 +268,7 @@ If you use another IDE, you might have to adjust the setup a bit.
 
 ##### Composer<a name="composer"></a>
 
-See how to install composer [here](#install-composer).
+See how to install `composer` [here](#install-composer).
 
 - **Settings > PHP > Composer**
   - **Composer executable**: `/usr/local/bin/composer`
@@ -279,8 +279,8 @@ See how to install composer [here](#install-composer).
 See how to install PHP Code Sniffer [here](#install-php-code-sniffer).
 
 - **Settings > PHP > Quality Tools > PHP Code Sniffer**
-  - **PHP Code Sniffer (phpcs) path**: `/usr/local/bin/phpcs`
-  - **PHP Code Beautifier and Fixer (phpcbf) path**: `/usr/local/bin/phpcbf`
+  - **PHP Code Sniffer (`phpcs`) path**: `/usr/local/bin/phpcs`
+  - **PHP Code Beautifier and Fixer (`phpcbf`) path**: `/usr/local/bin/phpcbf`
   - **Coding standard**: `Custom`
   - **Configuration file**: `~/Development/WordPress/WP-Development/phpcs.xml`
 
@@ -291,9 +291,8 @@ They are used to minify and optimize CSS and JavaScript files.
 
 To use them, you need to have the following node modules installed:
 
-- [csso-cli](https://www.npmjs.com/package/csso-cli)
-- [terser](https://www.npmjs.com/package/terser)
 - [sass](https://www.npmjs.com/package/sass)
+- [terser](https://www.npmjs.com/package/terser)
 
 For simplicities’ sake, it is assumed that node modules are installed in the `~/Development/node_modules/` folder.
 You can install them by running the following command from the `~/Development` folder.
@@ -305,34 +304,34 @@ npm install csso-cli terser sass
 To configure the file watchers, go to:
 
 - **Settings > Tools > File Watchers**
-  - **CSSO CSS Optimizer**
-    - **Program**: `/home/your_user/Development/node_modules/csso-cli/bin/csso`
+  - **CSS Minify**
+    - **Program**: `//home/your_user/Development/node_modules/sass/sass.js`
     - **File type**: `Cascade Style Sheets`
     - **Scope**: `Project Files`
-    - **Arguments**: `-i $FileName$ -o $FileNameWithoutExtension$.min.css -s file`
-    - **Output paths**: `$FileNameWithoutExtension$.min.css`
+    - **Arguments**: `--style=compressed $FileName$:$FileNameWithoutExtension$.css`
+    - **Output paths to refresh**: `$FileNameWithoutExtension$.css:$FileNameWithoutExtension$.min.css:$FileNameWithoutExtension$.min.css.map`
     - **Working directory**: `$FileDir$`
     - **Advanced options**: Nothing selected
-  - **Terser**
+  - **JS Minify**
     - **Program**: `/home/your_user/Development/node_modules/terser/bin/terser`
     - **File type**: `JavaScript`
     - **Scope**: `Project Files`
     - **Arguments**: `$FileName$ -o $FileNameWithoutExtension$.min.js --source-map "url='$FileNameWithoutExtension$.min.js.map'" --compress reduce_vars=false --mangle --format quote_style=1`
-    - **Output paths**: `$FileNameWithoutExtension$.min.js`
+    - **Output paths to refresh**: `$FileNameWithoutExtension$.min.js`
     - **Working directory**: `$FileDir$`
     - **Advanced options**: Nothing selected
-  - **SCSS**
+  - **SCSS Compile**
     - **Program**: `/home/your_user/Development/node_modules/sass/sass.js`
     - **File type**: `SCSS Style Sheets`
     - **Scope**: `Project Files`
-    - **Arguments**: `--style=compressed $FileName$:../assets/css/$FileNameWithoutExtension$.css`
-    - **Output paths**: `$FileNameWithoutExtension$.css:$FileNameWithoutExtension$.css.map`
+    - **Arguments**: `--style=compressed $FileName$:../Assets/css/$FileNameWithoutExtension$.css`
+    - **Output paths to refresh**: `$FileNameWithoutExtension$.css:$FileNameWithoutExtension$.css.map`
     - **Working directory**: `$FileDir$`
     - **Advanced options**: Nothing selected
 
 ## Makefile<a name="makefile"></a>
 
-The Makefile contains a couple of useful commands.
+The `Makefile` contains a couple of useful commands.
 
 All commands are run from the `~/Development/WordPress/WP-Development` folder.
 

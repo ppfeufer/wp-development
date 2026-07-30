@@ -39,6 +39,13 @@
       <excludeFolder url="file://$MODULE_DIR$/wp-content/themes/eve-online/vendor/gettext" />
       <excludeFolder url="file://$MODULE_DIR$/wp-content/cache" />
       <excludeFolder url="file://$MODULE_DIR$/wp-content/uploads" />
+      <excludeFolder url="file://$MODULE_DIR$/wp-content/plugins/download-button-shortcode/vendor" />
+      <excludeFolder url="file://$MODULE_DIR$/wp-content/plugins/pp-wordpress-tweaks/vendor" />
+      <excludeFolder url="file://$MODULE_DIR$/wp-content/plugins/pp-wp-memory-usage/vendor" />
+      <excludeFolder url="file://$MODULE_DIR$/wp-content/plugins/pp-wp-show-ids/vendor" />
+      <excludeFolder url="file://$MODULE_DIR$/wp-content/themes/eve-online/vendor" />
+      <excludeFolder url="file://$MODULE_DIR$/wp-content/themes/ppfeufer/vendor" />
+      <excludeFolder url="file://$MODULE_DIR$/wp-content/themes/terra-nanotech/vendor/gettext" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
