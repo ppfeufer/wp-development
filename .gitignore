@@ -1,12 +1,12 @@
 # Project Settings
 .idea/vcs.xml
 .idea/libraries/Generated_files.xml
-
-/wp-content*
-
-*.sql
-
 .idea/copilot.data.migration.agent.xml
 .idea/copilot.data.migration.ask.xml
 .idea/copilot.data.migration.ask2agent.xml
 .idea/copilot.data.migration.edit.xml
+.idea/jsonSchemas.xml
+
+/wp-content*
+
+*.sql
