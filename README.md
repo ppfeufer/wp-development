@@ -308,7 +308,7 @@ To configure the file watchers, go to:
     - **Program**: `//home/your_user/Development/node_modules/sass/sass.js`
     - **File type**: `Cascade Style Sheets`
     - **Scope**: `Project Files`
-    - **Arguments**: `--style=compressed $FileName$:$FileNameWithoutExtension$.css`
+    - **Arguments**: `--style=compressed $FileName$:$FileNameWithoutExtension$.min.css`
     - **Output paths to refresh**: `$FileNameWithoutExtension$.css:$FileNameWithoutExtension$.min.css:$FileNameWithoutExtension$.min.css.map`
     - **Working directory**: `$FileDir$`
     - **Advanced options**: Nothing selected

@@ -3,8 +3,8 @@
   <component name="ProjectTasksOptions">
     <enabled-global>
       <option value="Sass CSS Compile" />
-      <option value="Terser JS Minify" />
       <option value="Sass CSS Minify" />
+      <option value="Terser JS Minify" />
     </enabled-global>
   </component>
 </project>
