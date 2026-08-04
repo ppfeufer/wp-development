@@ -10,3 +10,9 @@
 /wp-content*
 
 *.sql
+
+# Vale styles
+/.vale-styles/Google/
+/.vale-styles/Microsoft/
+/.vale-styles/Readability/
+/.vale-styles/write-good/

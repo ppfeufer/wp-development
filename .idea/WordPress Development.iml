@@ -47,6 +47,10 @@
       <excludeFolder url="file://$MODULE_DIR$/wp-content/themes/ppfeufer/vendor" />
       <excludeFolder url="file://$MODULE_DIR$/wp-content/themes/terra-nanotech/vendor/gettext" />
       <excludeFolder url="file://$MODULE_DIR$/wp-content/themes/terra-nanotech/vendor" />
+      <excludeFolder url="file://$MODULE_DIR$/.vale-styles/Google" />
+      <excludeFolder url="file://$MODULE_DIR$/.vale-styles/Microsoft" />
+      <excludeFolder url="file://$MODULE_DIR$/.vale-styles/Readability" />
+      <excludeFolder url="file://$MODULE_DIR$/.vale-styles/write-good" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
